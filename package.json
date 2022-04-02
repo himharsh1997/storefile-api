@@ -1,0 +1,38 @@
+{
+  "name": "storefile-api",
+  "version": "1.0.0",
+  "description": "Store files of user",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "local": "npx tsc && node dist/app.js",
+    "lint": "npx eslint . --ext .ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/himharsh1997/storefile-api.git"
+  },
+  "keywords": [
+    "NodeJS",
+    "ExpressJS",
+    "Storage"
+  ],
+  "author": "Himanshu Joshi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/himharsh1997/storefile-api/issues"
+  },
+  "homepage": "https://github.com/himharsh1997/storefile-api#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.1",
+    "@typescript-eslint/eslint-plugin": "^5.17.0",
+    "@typescript-eslint/parser": "^5.17.0",
+    "eslint": "^8.12.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4",
+    "typescript": "^4.6.3"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
