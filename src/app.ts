@@ -1,10 +1,11 @@
 import express from 'express';
+import UserRoute from './route/user';
 
 const app = express();
 const port = 3000;
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
+app.use(UserRoute);
 
-app.listen(port, () => console.log(`Express is listening at http://localhost:${port}`));
+app.listen(port, () =>
+  console.log(`Express is listening at http://localhost:${port}`)
+);
