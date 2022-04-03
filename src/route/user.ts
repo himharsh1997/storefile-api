@@ -2,6 +2,14 @@ import { Router } from 'express';
 
 export const app = Router();
 
-app.post('/signup');
+app.use('/signup', (req, res) => {
+  console.log(req);
+  res.status(200).send('Hello world');
+});
+
+app.use('/login', (req, res) => {
+  console.log(req);
+  res.status(200).send('Hello world');
+});
 
 export default app;
