@@ -6,7 +6,11 @@
         "moduleResolution": "node",
         "sourceMap": true,
         "outDir": "dist",
-        "rootDir": "src"
+        "rootDir": "src",
+        "baseUrl": "src",
+        "paths": {
+           "@config": ["config/index.ts"]
+        }
       },
       "lib": ["es2015"]
 }
