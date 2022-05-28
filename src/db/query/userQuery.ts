@@ -1,14 +1,18 @@
 import { UserSchema } from '../schema';
-import { Model } from 'mongoose';
+import mongoose from 'mongoose';
 import { User } from 'model';
 
 export class UserQuery {
-  client: Model<User>;
+  client: mongoose.Model<User>;
   constructor() {
-    this.client = UserSchema();
+    this.client = mongoose.model('user', UserSchema);
   }
 
-  async getByEmail(email: string): Promise<User>{
-    return await this.client.findOne({email});
+  async getByEmail(email: string): Promise<User> {
+    return await this.client.findOne({ email });
+  }
+
+  async createUser(userInfo: User): Promise<void> {
+    await this.client.create(userInfo);
   }
 }
