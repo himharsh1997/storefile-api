@@ -21,7 +21,6 @@ export class UserBiz {
         const error = new Error();
         error.message = RESPONSE_MSG.USER_ALREADY_REGISTER;
         throw error;
-
       }
 
       const auth0Mgmt = new Auth0Mgmt();
@@ -37,14 +36,21 @@ export class UserBiz {
 
   async handlerLogin(userSignupInfo: UserSiginBody): Promise<unknown> {
     try {
-      console.log('Signup process started =========');
-      console.log('Body of signup API', userSignupInfo);
+      console.log('Login process started =========');
+      console.log('Body of login API', userSignupInfo);
       const { email, password }: UserSiginBody = userSignupInfo;
 
-      const auth0HTTP = new Auth0HTTP();
+      const userQuery = new UserQuery();
+      const user = await userQuery.getByEmail(email);
+      if (!user) {
+        const error = new Error();
+        error.message = RESPONSE_MSG.USER_NOT_FOUND;
+        throw error;
+      }
 
-      await auth0HTTP.login(email, password);
-      return;
+      const auth0HTTP = new Auth0HTTP();
+      const result = await auth0HTTP.login(email, password);
+      return result.data;
     } catch (error) {
       throw error;
     }

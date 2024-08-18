@@ -10,12 +10,14 @@ config()
 mongoose.connect(process.env.MONGODB_ENDPOINT);
 
 const app = express();
-const port = 8080;
+const port = 8081;
 
 app.use(express.json());
 
 // app.use(auth({audience: process.env.AUTH0_ISSSER, issuerBaseURL: process.env.AUDIENCE}));
 app.use('/user/auth', userRoute);
+
+app.use
 
 app.get('/test', (req, res)=>{ res.status(500).send('Internal Server Error')});
 

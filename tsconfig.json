@@ -8,6 +8,7 @@
         "outDir": "dist",
         "rootDir": "src",
         "baseUrl": "src",
+        "skipLibCheck": true,
         "paths": {
            "@config": ["config/index.ts"],
            "@route": ["route/index.ts"],
