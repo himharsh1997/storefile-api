@@ -6,6 +6,7 @@
   "scripts": {
     "test": "mocha --recursive '**/*.spec.js'",
     "local": "rm -rf dist && npx tsc && nodemon --watch './**/*.ts' --exec 'ts-node' src/app.ts",
+    "build": "rm -rf dist && npx tsc",
     "lint": "npx eslint . --ext .ts",
     "lintFix": "eslint --fix",
     "prepare": "husky install .husky"
