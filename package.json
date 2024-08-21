@@ -37,7 +37,7 @@
     "express": "^4.19.2",
     "express-oauth2-jwt-bearer": "^1.1.0",
     "mocha": "^10.7.3",
-    "mongoose": "^6.12.0",
+    "mongoose": "^6.13.0",
     "node-fetch": "^3.2.10",
     "request": "^2.88.2"
   },
