@@ -28,7 +28,7 @@
   "homepage": "https://github.com/himharsh1997/storefile-api#readme",
   "dependencies": {
     "@aws-sdk/client-s3": "^3.529.0",
-    "@types/auth0": "^2.34.19",
+    "@types/auth0": "^2.35.11",
     "@types/dotenv": "^8.2.0",
     "@types/mongoose": "^5.11.97",
     "auth0": "^4.0.0",
